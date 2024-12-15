@@ -1,0 +1,14 @@
+{
+  "appTitle": "my_application_name_replace",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "The title of the settings page"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "The title of the home page"
+  }
+}
