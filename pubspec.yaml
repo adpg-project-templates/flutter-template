@@ -17,6 +17,7 @@ dependencies:
     sdk: flutter
 
   provider: ^6.0.0
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +34,15 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - .env
+
+fonts:
+  - family: Manrope
+    fonts:
+      - asset: assets/fonts/Manrope-Regular.ttf
+      - asset: assets/fonts/Manrope-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/Manrope-SemiBold.ttf
+        weight: 600
+      - asset: assets/fonts/Manrope-Bold.ttf
+        weight: 700

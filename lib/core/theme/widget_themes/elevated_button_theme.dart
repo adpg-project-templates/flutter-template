@@ -18,7 +18,6 @@ class AppElevatedButtonTheme {
       backgroundColor: backgroundColor,
       disabledForegroundColor: disabledForegroundColor,
       disabledBackgroundColor: disabledBackgroundColor,
-      side: const BorderSide(color: AppColors.primary),
       padding: const EdgeInsets.symmetric(vertical: AppSizes.buttonHeight),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppSizes.buttonRadius),
@@ -27,24 +26,24 @@ class AppElevatedButtonTheme {
         fontSize: 16,
         color: AppColors.textWhite,
         fontWeight: fontWeight,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
     );
   }
 
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: _baseStyle(
-      foregroundColor: AppColors.light,
+      foregroundColor: AppColors.white,
       backgroundColor: AppColors.primary,
       disabledForegroundColor: AppColors.darkGrey,
       disabledBackgroundColor: AppColors.buttonDisabled,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     ),
   );
 
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: _baseStyle(
-      foregroundColor: AppColors.light,
+      foregroundColor: AppColors.white,
       backgroundColor: AppColors.primary,
       disabledForegroundColor: AppColors.darkGrey,
       disabledBackgroundColor: AppColors.darkerGrey,

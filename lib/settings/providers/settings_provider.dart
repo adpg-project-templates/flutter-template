@@ -11,10 +11,11 @@ class SettingsProvider with ChangeNotifier {
 
   ThemeMode get themeMode => _themeMode;
 
-  Future<void> loadSettings() async {
+  Future<SettingsProvider> loadSettings() async {
     _themeMode = await _settingsService.themeMode();
 
     notifyListeners();
+    return this;
   }
 
   Future<void> updateThemeMode(ThemeMode? newThemeMode) async {

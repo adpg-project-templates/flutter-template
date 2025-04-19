@@ -65,6 +65,7 @@ lib/generated_plugin_registrant.dart
 
 # Android related
 **/android/**/gradle-wrapper.jar
+**/android/app/.cxx/
 **/android/.gradle
 **/android/captures/
 **/android/gradlew
@@ -110,3 +111,5 @@ lib/generated_plugin_registrant.dart
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
 # End of https://www.toptal.com/developers/gitignore/api/flutter
+
+.env

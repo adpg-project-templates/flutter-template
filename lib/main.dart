@@ -1,34 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:my_application_name_replace/core/config/provider.dart';
 import 'package:provider/provider.dart';
 
 import 'core/config/localization.dart';
 import 'core/config/routes.dart';
 import 'core/theme/theme.dart';
 import 'settings/providers/settings_provider.dart';
-import 'settings/services/settings_service.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() async {
-  final settings = SettingsProvider(SettingsService());
-
-  await settings.loadSettings();
-
-  runApp(App(settings: settings));
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ProviderConfig.initServices();
+  runApp(App());
 }
 
 class App extends StatelessWidget {
-  const App({super.key, required this.settings});
-
-  final SettingsProvider settings;
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      // Add new providers here
-      providers: [
-        ChangeNotifierProvider(create: (_) => settings),
-      ],
+      providers: ProviderConfig.providers,
       builder: (BuildContext context, Widget? child) {
         return Consumer<SettingsProvider>(
           builder:
@@ -43,6 +36,7 @@ class App extends StatelessWidget {
               darkTheme: AppThemes.darkTheme,
               themeMode: provider.themeMode,
               onGenerateRoute: (settings) => Routes.onGenerateRoute(settings),
+              initialRoute: Routes.home,
             );
           },
         );

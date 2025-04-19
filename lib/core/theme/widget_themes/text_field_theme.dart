@@ -14,6 +14,7 @@ class AppTextFormFieldTheme {
     required Color errorBorderColor,
     required Color prefixIconColor,
     required Color suffixIconColor,
+    required Color fillColor,
   }) {
     return InputDecorationTheme(
       errorMaxLines: 3,
@@ -22,32 +23,32 @@ class AppTextFormFieldTheme {
       labelStyle: TextStyle(
         fontSize: AppSizes.fontSizeMd,
         color: labelColor,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
       hintStyle: TextStyle(
         fontSize: AppSizes.fontSizeSm,
         color: hintColor,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
       errorStyle: TextStyle(
         fontStyle: FontStyle.normal,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
       floatingLabelStyle: TextStyle(
         color: floatingLabelColor,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-        borderSide: BorderSide(width: 1, color: borderColor),
+        borderSide: BorderSide.none,
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-        borderSide: BorderSide(width: 1, color: borderColor),
+        borderSide: BorderSide.none,
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-        borderSide: BorderSide(width: 1, color: focusedBorderColor),
+        borderSide: BorderSide.none,
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
@@ -57,6 +58,9 @@ class AppTextFormFieldTheme {
         borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
         borderSide: BorderSide(width: 2, color: errorBorderColor),
       ),
+      filled: true,
+      fillColor: fillColor,
+      floatingLabelBehavior: FloatingLabelBehavior.never,
     );
   }
 
@@ -68,19 +72,21 @@ class AppTextFormFieldTheme {
     borderColor: AppColors.borderPrimary,
     focusedBorderColor: AppColors.borderSecondary,
     errorBorderColor: AppColors.error,
-    prefixIconColor: AppColors.darkGrey,
-    suffixIconColor: AppColors.darkGrey,
+    prefixIconColor: AppColors.iconColor,
+    suffixIconColor: AppColors.iconColor,
+    fillColor: AppColors.inputBackground
   );
 
   static final InputDecorationTheme darkInputDecorationTheme =
       _baseInputDecorationTheme(
     labelColor: AppColors.white,
-    hintColor: AppColors.white,
-    floatingLabelColor: AppColors.white.withAlpha(204),
+    hintColor: AppColors.textSecondary,
+    floatingLabelColor: AppColors.textSecondary,
     borderColor: AppColors.darkGrey,
     focusedBorderColor: AppColors.white,
     errorBorderColor: AppColors.error,
-    prefixIconColor: AppColors.darkGrey,
-    suffixIconColor: AppColors.darkGrey,
+    prefixIconColor: AppColors.iconColor,
+    suffixIconColor: AppColors.iconColor,
+    fillColor: AppColors.darkBackground
   );
 }

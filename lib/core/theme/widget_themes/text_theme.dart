@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../constant/sizes.dart';
+import '../../constant/colors.dart';
 
 class AppTextThemes {
   AppTextThemes._();
@@ -9,10 +9,10 @@ class AppTextThemes {
     return TextTheme();
   }
 
-  static const FontWeight fontWeightBold = FontWeight.bold;
+  static const FontWeight fontWeightBold = FontWeight.w700;
   static const FontWeight fontWeightSemiBold = FontWeight.w600;
   static const FontWeight fontWeightMedium = FontWeight.w500;
-  static const FontWeight fontWeightNormal = FontWeight.normal;
+  static const FontWeight fontWeightNormal = FontWeight.w400;
 
   static const TextStyle headL = TextStyle(
     fontSize: AppSizes.fontSizeHeadL,
@@ -65,30 +65,30 @@ class AppTextThemes {
   );
 
   static final TextTheme lightTheme = _baseTheme().copyWith(
-    headlineLarge: headL.copyWith(color: Colors.black),
-    headlineMedium: headM.copyWith(color: Colors.black),
-    headlineSmall: headS.copyWith(color: Colors.black),
-    titleLarge: titleL.copyWith(color: Colors.black),
-    titleMedium: titleM.copyWith(color: Colors.black),
-    titleSmall: titleS.copyWith(color: Colors.black),
-    bodyLarge: bodyL.copyWith(color: Colors.black),
-    bodyMedium: bodyM.copyWith(color: Colors.black),
-    bodySmall: bodyS.copyWith(color: Colors.black.withAlpha(128)),
-    labelLarge: label.copyWith(color: Colors.black),
-    labelMedium: label.copyWith(color: Colors.black.withAlpha(128)),
+    headlineLarge: headL.copyWith(color: AppColors.textPrimary),
+    headlineMedium: headM.copyWith(color: AppColors.textPrimary),
+    headlineSmall: headS.copyWith(color: AppColors.textPrimary),
+    titleLarge: titleL.copyWith(color: AppColors.textPrimary),
+    titleMedium: titleM.copyWith(color: AppColors.textPrimary),
+    titleSmall: titleS.copyWith(color: AppColors.textPrimary),
+    bodyLarge: bodyL.copyWith(color: AppColors.textPrimary),
+    bodyMedium: bodyM.copyWith(color: AppColors.textPrimary),
+    bodySmall: bodyS.copyWith(color: AppColors.textSecondary),
+    labelLarge: label.copyWith(color: AppColors.textPrimary),
+    labelMedium: label.copyWith(color: AppColors.textSecondary),
   );
 
   static final TextTheme darkTheme = _baseTheme().copyWith(
-    headlineLarge: headL.copyWith(color: Colors.white),
-    headlineMedium: headM.copyWith(color: Colors.white),
-    headlineSmall: headS.copyWith(color: Colors.white),
-    titleLarge: titleL.copyWith(color: Colors.white),
-    titleMedium: titleM.copyWith(color: Colors.white),
-    titleSmall: titleS.copyWith(color: Colors.white),
-    bodyLarge: bodyL.copyWith(color: Colors.white),
-    bodyMedium: bodyM.copyWith(color: Colors.white),
-    bodySmall: bodyS.copyWith(color: Colors.white.withAlpha(128)),
-    labelLarge: label.copyWith(color: Colors.white),
-    labelMedium: label.copyWith(color: Colors.white.withAlpha(128)),
+    headlineLarge: headL.copyWith(color: AppColors.white),
+    headlineMedium: headM.copyWith(color: AppColors.white),
+    headlineSmall: headS.copyWith(color: AppColors.white),
+    titleLarge: titleL.copyWith(color: AppColors.white),
+    titleMedium: titleM.copyWith(color: AppColors.white),
+    titleSmall: titleS.copyWith(color: AppColors.white),
+    bodyLarge: bodyL.copyWith(color: AppColors.white),
+    bodyMedium: bodyM.copyWith(color: AppColors.white),
+    bodySmall: bodyS.copyWith(color: AppColors.textSecondary),
+    labelLarge: label.copyWith(color: AppColors.white),
+    labelMedium: label.copyWith(color: AppColors.textSecondary),
   );
 }

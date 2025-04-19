@@ -25,24 +25,24 @@ class AppOutlinedButtonTheme {
         fontSize: 16,
         color: textColor,
         fontWeight: FontWeight.w600,
-        fontFamily: 'Urbanist',
+        fontFamily: 'Manrope',
       ),
     );
   }
 
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: _baseStyle(
-      foregroundColor: AppColors.dark,
+      foregroundColor: AppColors.textPrimary,
       borderColor: AppColors.borderPrimary,
-      textColor: AppColors.black,
+      textColor: AppColors.textPrimary,
     ),
   );
 
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: _baseStyle(
-      foregroundColor: AppColors.light,
+      foregroundColor: AppColors.white,
       borderColor: AppColors.borderPrimary,
-      textColor: AppColors.textWhite,
+      textColor: AppColors.white,
     ),
   );
 }

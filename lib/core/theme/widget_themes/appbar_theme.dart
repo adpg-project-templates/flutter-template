@@ -33,14 +33,14 @@ class AppAppBarTheme {
   static final AppBarTheme lightAppBarTheme = _baseAppBarTheme(
     backgroundColor: Colors.white,
     surfaceTintColor: Colors.white,
-    iconColor: AppColors.iconPrimary,
-    actionsIconColor: AppColors.iconPrimary,
+    iconColor: AppColors.iconColor,
+    actionsIconColor: AppColors.iconColor,
     titleColor: AppColors.black,
   );
 
   static final AppBarTheme darkAppBarTheme = _baseAppBarTheme(
-    backgroundColor: AppColors.dark,
-    surfaceTintColor: AppColors.dark,
+    backgroundColor: AppColors.darkBackground,
+    surfaceTintColor: AppColors.darkBackground,
     iconColor: AppColors.black,
     actionsIconColor: AppColors.white,
     titleColor: AppColors.white,
